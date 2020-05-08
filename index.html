@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Photo Album</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta24/shoelace.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <script type="text/javascript" src="js/apiGateway/lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="js/apiGateway/lib/CryptoJS/rollups/hmac-sha256.js"></script>
+    <script type="text/javascript" src="js/apiGateway/lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="js/apiGateway/lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="js/apiGateway/lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="js/apiGateway/lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="js/apiGateway/lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="js/apiGateway/lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="js/apiGateway/lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="js/apiGateway/lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="js/apiGateway/apigClient.js"></script>
+
+</head>
+
+<body>
+    <div class="container" style="max-width: 720px; margin-top: 10px;">
+        <div class= "header">
+        <h1>Smart Photo Album</h1>
+        <!-- <p class="small-caps">Using the <a href="https://aws.amazon.com/transcribe/">Amazon Transcribe</a> WebSocket API</p> -->
+        </div>
+        <hr/>
+
+        <div id="error" class="isa_error"></div>
+
+        <div class="input-group">
+            <input id="note-textarea" type="text" class="form-control" placeholder="Search for a photo" name="search">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit" onclick="searchPhoto()"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+
+        <textarea id="transcript" placeholder="Press Start and speak into your mic" rows="5"
+            readonly="readonly"></textarea>
+        <div class="row">
+            <div class="col">
+                <button id="start-button" class="button-xl" title="Start Transcription">
+                    <i class="fa fa-microphone"></i> Start
+                </button>
+                <button id="stop-button" class="button-xl" title="Stop Transcription" disabled="true"><i
+                        class="fa fa-stop-circle"></i> Stop
+                </button>
+                <button id="reset-button" class="button-xl button-secondary" title="Clear Transcript"> 
+                    Clear Transcript
+                </button>
+            </div>
+        </div>
+        
+        <div class="col-md-8 offset-md-2 mt-5 mb-5">
+            <!-- <h3 class="text-center mt-4">OR</h3> -->
+            <h3 class="text-center">Upload a new photo</h3>
+            <!-- <label for="file_path">Upload file</label> -->
+            <input type="file" class="form-control-file" id="file_path" >
+            <button class="btn btn-info mt-2" type="submit" onclick="uploadPhoto()">UPLOAD</button>
+        </div>
+
+        <p id ="uploadText"></p>
+        <div>
+            <div class="banner-section" id="img-container">
+                <p id="displaytext"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="upload.js"></script>
+    <script src="dist/main.js"></script>
+</body>
+
+</html>
