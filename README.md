@@ -2,6 +2,7 @@
 
 ##### [Link To Web Application Photo Album](http://smartphotoalbum.s3-website-us-east-1.amazonaws.com)
 
+![alt text](https://github.com/maheshg23/Voice-Based-Photo-Album-Search/blob/master/images/ApplicationUI.png)
 
 ## FRONTEND (HTML, JavaScript, CSS)
 The frontend is hosted in AWS S3 and provides a web-app user interface to interact with the chat bot. Many open source libraries and frameworks were used to design the UI/UX of the bot. 
@@ -19,14 +20,9 @@ The Upload workflow takes an image from the user local system and uplads it dire
 ## ARCHITECHTURE :- 
 ![alt text](https://github.com/maheshg23/Voice-Based-Photo-Album-Search/blob/master/images/ArchitectureDiagram.png)
 
-
-## SAMPLE UI OF THE WEB APPLICATION
-![alt text](https://github.com/maheshg23/Voice-Based-Photo-Album-Search/blob/master/images/ApplicationUI.png)
-
-
 ## SAMPLE OUTPUT 
 ### Search a Photo
-The user searches for a particular photo and it is displayed after the search is sccessful :-  
+The user searches for a particular photo and it is displayed after the search is successful :-  
 ![alt text](https://github.com/maheshg23/Voice-Based-Photo-Album-Search/blob/master/images/SeachOutput.png)
 
 
