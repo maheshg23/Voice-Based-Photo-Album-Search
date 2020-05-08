@@ -41,7 +41,6 @@ function searchPhoto() {
       var para = document.createElement("p");
       para.setAttribute("id", "displaytext")
       document.getElementById("img-container").appendChild(para);
-
       
 
       img1.forEach(function (obj) {
