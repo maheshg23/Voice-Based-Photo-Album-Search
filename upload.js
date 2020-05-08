@@ -99,7 +99,8 @@ function uploadPhoto() {
       // var filename = x[x.length-1]
       //  var file_type = file.type + ";base64"
 
-      var body = data;
+      // var body = data;
+      var body = file;
       var params = {
         "item": file.name,
         "folder": "photosforsearch1",
@@ -112,26 +113,31 @@ function uploadPhoto() {
         },
       };
 
-      apigClient.uploadFolderItemPut(params, body, additionalParams).then(function (res) {
-        if (res.status == 200) {
-          // alert("Upload Successfull")
-          console.log("Success");
-          document.getElementById("uploadText").innerHTML = "IMAGE UPLOADED SUCCESSFULLY !!!"
-          document.getElementById("uploadText").style.display = "block";
-          document.getElementById("uploadText").style.color = "green";
-          document.getElementById("uploadText").style.fontWeight = "bold";
-        }
-      })
+      // apigClient.uploadFolderItemPut(params, body, additionalParams).then(function (res) {
+      //   if (res.status == 200) {
+      //     // alert("Upload Successfull")
+      //     console.log("Success");
+      //     document.getElementById("uploadText").innerHTML = "IMAGE UPLOADED SUCCESSFULLY !!!"
+      //     document.getElementById("uploadText").style.display = "block";
+      //     document.getElementById("uploadText").style.color = "green";
+      //     document.getElementById("uploadText").style.fontWeight = "bold";
+      //   }
+      // })
     });
 
-  /*console.log("trueeee")
+  
   let config = {
        headers: { 'Content-Type': file.type }
    };
-   url = 'https://cors-anywhere.herokuapp.com/https://q6mpc0sjz1.execute-api.us-east-1.amazonaws.com/tst/upload/photosforsearch1/' + file.name
+   url = 'https://cors-anywhere.herokuapp.com/https://q6mpc0sjz1.execute-api.us-east-1.amazonaws.com/TestAuth/upload/photosforsearch1/' + file.name
    axios.put(url, file, config).then(response => {
-       console.log(" New "+response.data)
-       alert("Image uploaded successfully!");
-   });*/
+    //  console.log(" New "+response.data)
+    //  alert("Image uploaded successfully!");
+     console.log("Success");
+     document.getElementById("uploadText").innerHTML = "IMAGE UPLOADED SUCCESSFULLY !!!"
+     document.getElementById("uploadText").style.display = "block";
+     document.getElementById("uploadText").style.color = "green";
+     document.getElementById("uploadText").style.fontWeight = "bold";
+   });
 
 }
