@@ -1,6 +1,6 @@
 ## Voice Based Photo Album Search
 
-##### [Link To Web Application UnKnown Visitor](http://smartphotoalbum.s3-website-us-east-1.amazonaws.com)
+##### [Link To Web Application Photo Album](http://smartphotoalbum.s3-website-us-east-1.amazonaws.com)
 
 
 ## FRONTEND (HTML, JavaScript, CSS)
@@ -17,17 +17,17 @@ The Search query from the user is sent to AWS Lex which identifies the keywords 
 The Upload workflow takes an image from the user local system and uplads it directly to S3 and then uses AWS rekognition to index the image which is later stored in Elastic search.
 
 ## ARCHITECHTURE :- 
-![alt text](https://github.com/maheshg23/Smart-Door-Authentication-System/blob/master/images/Architecture.png)
+![alt text](https://github.com/maheshg23/Voice-Based-Photo-Album-Search/blob/master/images/ArchitectureDiagram.png)
 
 
 ## SAMPLE UI OF THE WEB APPLICATION
-![alt text](https://github.com/maheshg23/Smart-Door-Authentication-System/blob/master/images/ApplicationUI.png)
+![alt text](https://github.com/maheshg23/Voice-Based-Photo-Album-Search/blob/master/images/ApplicationUI.png)
 
 
 ## SAMPLE OUTPUT 
 ### Search a Photo
-The person at the door recieves an SMS of the OTP which is valid only for 5 minutes :-  
-![alt text](https://github.com/maheshg23/Smart-Door-Authentication-System/blob/master/images/SeachOutput.png)
+The user searches for a particular photo and it is displayed after the search is sccessful :-  
+![alt text](https://github.com/maheshg23/Voice-Based-Photo-Album-Search/blob/master/images/SeachOutput.png)
 
 
 ### References `
